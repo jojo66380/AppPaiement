@@ -132,9 +132,14 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                 let result = montant_compte_double + character_textfield_double
                 
                 if (result < 0) {
-                    print("error de montant")
+                    let alert = UIAlertController(title: "Erreur", message: "Le montant a débité est supérieur au montant contenu dans le compte", preferredStyle: UIAlertControllerStyle.alert)
+                    let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alert.addAction(cancelAction)
+                    self.present(alert, animated: true)
                 }
                 print(result)
+                self.fetch_request_PATCH(url: request_url_update, datas_dict: ["collection":"compte", "id":num_compte_text, "field_name":"montant", "new_value":"\(result)"])
+
                 self.montantTextField.text = ""
                 self.numCompte.text = ""
                 //Action sur la base de données
@@ -144,6 +149,33 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             self.present(alertVerif, animated: true)
         }
     }
+    
+    func fetch_request_PATCH (url:String, datas_dict:[String:Any]) {
+        let requestObject = NSMutableURLRequest(url: URL(string:url)!)
+        requestObject.httpMethod = "PATCH"
+        requestObject.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        requestObject.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        /* Envoie des données entrées en paramètres, et converties en JSON */
+        let posting = JSON(datas_dict)
+        requestObject.httpBody = posting.rawString()!.data(using: String.Encoding.utf8)
+        print(posting.rawString()!.data(using: String.Encoding.utf8)!)
+        
+        
+        let requestToServer = URLSession.shared.dataTask(with: requestObject as URLRequest) { (data, response, error) in
+            if (error != nil){
+                print(error!.localizedDescription)
+            }
+            else {
+                let statusHTTPCode = (response as! HTTPURLResponse).statusCode
+                if (statusHTTPCode == 204) {
+                    print("The document with id : \(String(describing: datas_dict["id"])) was updated")
+                }
+            }
+        }
+        requestToServer.resume()
+    }
+
 
 }
 
