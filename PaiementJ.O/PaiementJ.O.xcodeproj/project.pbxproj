@@ -12,8 +12,8 @@
 		F80778D51ECECC0F00B35495 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F80778D31ECECC0F00B35495 /* Main.storyboard */; };
 		F80778D71ECECC0F00B35495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F80778D61ECECC0F00B35495 /* Assets.xcassets */; };
 		F80778DA1ECECC0F00B35495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F80778D81ECECC0F00B35495 /* LaunchScreen.storyboard */; };
+		F827D5D21ED438D100501495 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F827D5D11ED438D100501495 /* RequestManager.swift */; };
 		F883D9FB1ED23EAA00C8DE96 /* ConnectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F883D9FA1ED23EAA00C8DE96 /* ConnectionController.swift */; };
-		F883DA661ED2E5A400C8DE96 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F883DA651ED2E5A400C8DE96 /* RequestManager.swift */; };
 		F883DA681ED2E67F00C8DE96 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F883DA671ED2E67F00C8DE96 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,8 +25,8 @@
 		F80778D61ECECC0F00B35495 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F80778D91ECECC0F00B35495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F80778DB1ECECC0F00B35495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F827D5D11ED438D100501495 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		F883D9FA1ED23EAA00C8DE96 /* ConnectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionController.swift; sourceTree = "<group>"; };
-		F883DA651ED2E5A400C8DE96 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		F883DA671ED2E67F00C8DE96 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +64,7 @@
 				F80778CF1ECECC0F00B35495 /* AppDelegate.swift */,
 				F80778D11ECECC0F00B35495 /* ViewController.swift */,
 				F883D9FA1ED23EAA00C8DE96 /* ConnectionController.swift */,
-				F883DA651ED2E5A400C8DE96 /* RequestManager.swift */,
+				F827D5D11ED438D100501495 /* RequestManager.swift */,
 				F80778D31ECECC0F00B35495 /* Main.storyboard */,
 				F80778D61ECECC0F00B35495 /* Assets.xcassets */,
 				F80778D81ECECC0F00B35495 /* LaunchScreen.storyboard */,
@@ -148,9 +148,9 @@
 			files = (
 				F80778D21ECECC0F00B35495 /* ViewController.swift in Sources */,
 				F883D9FB1ED23EAA00C8DE96 /* ConnectionController.swift in Sources */,
+				F827D5D21ED438D100501495 /* RequestManager.swift in Sources */,
 				F80778D01ECECC0F00B35495 /* AppDelegate.swift in Sources */,
 				F883DA681ED2E67F00C8DE96 /* SwiftyJSON.swift in Sources */,
-				F883DA661ED2E5A400C8DE96 /* RequestManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
